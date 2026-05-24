@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Prediction Result</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+rel="stylesheet">
+
+<style>
+
+body{
+
+background:linear-gradient(
+135deg,
+#232526,
+#414345
+);
+
+color:white;
+
+min-height:100vh;
+
+}
+
+.result-card{
+
+margin-top:100px;
+
+padding:50px;
+
+border-radius:25px;
+
+background:rgba(255,255,255,0.1);
+
+backdrop-filter:blur(15px);
+
+text-align:center;
+
+animation:zoom 1s;
+
+}
+
+.result-card:hover{
+
+box-shadow:0px 0px 30px cyan;
+
+}
+
+.result-text{
+
+font-size:35px;
+
+animation:pulse 1.5s infinite;
+
+}
+
+.btn-custom{
+
+transition:0.5s;
+
+margin:10px;
+
+border-radius:25px;
+
+padding:10px 25px;
+
+}
+
+.btn-custom:hover{
+
+transform:scale(1.1);
+
+}
+
+@keyframes zoom{
+
+from{
+
+transform:scale(0.7);
+
+opacity:0;
+
+}
+
+to{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+}
+
+@keyframes pulse{
+
+50%{
+
+transform:scale(1.1);
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="result-card">
+
+<h1>
+
+🚦 Prediction Result
+
+</h1>
+
+<hr>
+
+<h2 class="result-text">
+
+Predicted Vehicles: {{prediction}}
+
+</h2>
+
+<h2>
+
+Traffic Status: {{status}}
+
+</h2>
+
+<br>
+
+<a href="/predict">
+
+<button class="btn btn-info btn-custom">
+
+Predict Again
+
+</button>
+
+</a>
+
+<a href="/dashboard">
+
+<button class="btn btn-success btn-custom">
+
+Dashboard Home
+
+</button>
+
+</a>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

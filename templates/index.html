@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Traffic Prediction</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+rel="stylesheet">
+
+<style>
+
+body{
+
+background:linear-gradient(
+135deg,
+#000428,
+#004e92
+);
+
+color:white;
+
+min-height:100vh;
+
+}
+
+.card-box{
+
+background:rgba(255,255,255,0.1);
+
+backdrop-filter:blur(15px);
+
+padding:40px;
+
+border-radius:25px;
+
+margin-top:50px;
+
+animation:slide 1s;
+
+}
+
+.card-box:hover{
+
+box-shadow:0px 0px 30px cyan;
+
+}
+
+.title{
+
+font-size:40px;
+
+font-weight:bold;
+
+text-align:center;
+
+text-shadow:0px 0px 15px cyan;
+
+animation:floating 2s infinite alternate;
+
+}
+
+button{
+
+transition:0.5s;
+
+}
+
+button:hover{
+
+transform:scale(1.1);
+
+}
+
+@keyframes slide{
+
+from{
+
+opacity:0;
+
+transform:translateY(50px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0px);
+
+}
+
+}
+
+@keyframes floating{
+
+from{
+
+transform:translateY(0px);
+
+}
+
+to{
+
+transform:translateY(-8px);
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="card-box">
+
+<h1 class="title">
+
+🚦 Smart Traffic Prediction
+
+</h1>
+
+<hr>
+
+<form action="/predict" method="POST">
+
+<div class="row">
+
+<div class="col-md-6 mb-3">
+
+<input type="number"
+class="form-control"
+name="Junction"
+placeholder="Junction"
+required>
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<input type="number"
+class="form-control"
+name="Year"
+placeholder="Year"
+required>
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<input type="number"
+class="form-control"
+name="Month"
+placeholder="Month"
+required>
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<input type="number"
+class="form-control"
+name="Day"
+placeholder="Day"
+required>
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<input type="number"
+class="form-control"
+name="Hour"
+placeholder="Hour"
+required>
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<input type="number"
+class="form-control"
+name="DayOfWeek"
+placeholder="Day Of Week"
+required>
+
+</div>
+
+</div>
+
+<div class="text-center">
+
+<button class="btn btn-info">
+
+Predict Traffic
+
+</button>
+
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+</body>
+</html>

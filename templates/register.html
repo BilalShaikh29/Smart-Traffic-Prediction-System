@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Register</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+
+body{
+
+background:linear-gradient(
+135deg,
+#000428,
+#004e92,
+#141E30
+);
+
+height:100vh;
+
+overflow:hidden;
+
+color:white;
+
+}
+
+.register-card{
+
+background:rgba(255,255,255,0.1);
+
+backdrop-filter:blur(15px);
+
+padding:40px;
+
+border-radius:30px;
+
+margin-top:60px;
+
+box-shadow:0px 10px 30px rgba(0,0,0,0.5);
+
+animation:slideIn 1.2s;
+
+}
+
+.register-card:hover{
+
+box-shadow:0px 0px 35px cyan;
+
+}
+
+.title{
+
+font-size:38px;
+
+font-weight:bold;
+
+text-align:center;
+
+text-shadow:0px 0px 15px cyan;
+
+animation:floating 2s infinite alternate;
+
+}
+
+.subtitle{
+
+text-align:center;
+
+color:#d9faff;
+
+margin-bottom:30px;
+
+transition:0.5s;
+
+}
+
+.subtitle:hover{
+
+letter-spacing:3px;
+
+color:cyan;
+
+}
+
+.form-control{
+
+border-radius:20px;
+
+padding:12px;
+
+}
+
+.input-icon{
+
+position:relative;
+
+}
+
+.input-icon i{
+
+position:absolute;
+
+top:15px;
+
+left:15px;
+
+color:gray;
+
+}
+
+.input-icon input{
+
+padding-left:40px;
+
+}
+
+.btn-register{
+
+width:100%;
+
+border-radius:30px;
+
+font-weight:bold;
+
+padding:12px;
+
+transition:0.5s;
+
+}
+
+.btn-register:hover{
+
+transform:scale(1.08);
+
+box-shadow:0px 0px 20px cyan;
+
+}
+
+@keyframes slideIn{
+
+from{
+
+opacity:0;
+
+transform:translateY(50px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes floating{
+
+from{
+
+transform:translateY(0px);
+
+}
+
+to{
+
+transform:translateY(-8px);
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="row justify-content-center">
+
+<div class="col-md-5">
+
+<div class="register-card">
+
+<h1 class="title">
+
+🚦 Create Account
+
+</h1>
+
+<p class="subtitle">
+
+Join the Smart Traffic Prediction System
+
+</p>
+
+<form method="POST">
+
+<div class="input-icon mb-3">
+
+<i class="fas fa-user"></i>
+
+<input type="text"
+name="username"
+placeholder="Username"
+class="form-control"
+required>
+
+</div>
+
+<div class="input-icon mb-4">
+
+<i class="fas fa-lock"></i>
+
+<input type="password"
+name="password"
+placeholder="Password"
+class="form-control"
+required>
+
+</div>
+
+<button class="btn btn-info btn-register">
+
+Register
+
+</button>
+
+</form>
+
+<br>
+
+<p class="text-center">
+
+Already have an account?
+
+<a href="/login">
+
+Login Here
+
+</a>
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
